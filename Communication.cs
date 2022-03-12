@@ -1,4 +1,6 @@
-﻿namespace BattleshipsShared.Communication
+﻿using System.Collections.Generic;
+
+namespace BattleshipsShared.Communication
 {
 
     public enum RequestType
@@ -14,7 +16,7 @@
     public struct Message
     {
 
-        public Message(RequestType requestType, object data) {
+        public Message(RequestType requestType, Dictionary<string ,object> data) {
             this.requestType = requestType;
             this.data = data;
         }

@@ -1,3 +1,5 @@
+using System.Net.WebSockets;
+
 namespace BattleshipsShared.Models
 {
     public struct JoinConfirmation
@@ -36,10 +38,20 @@ namespace BattleshipsShared.Models
     public struct User
     {
 
-        public User(string username) {
-            this.username = username;
+        public User(string userId) {
+            this.userId = userId;
         }
 
-        public string username { get; set; }
+        public string userId { get; set; }
+    }
+
+    public struct Player
+    {
+        public Player(string userId, WebSocketContext WSocket) {
+            this.userId = userId;
+            this.WSocket = WSocket;
+        }
+        public string userId { get; set; }
+        public WebSocketContext WSocket { get; set; }
     }
 }
