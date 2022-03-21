@@ -15,13 +15,13 @@ namespace BattleshipsShared.Models
 
     public struct GameJoinInfo
     {
-        public GameJoinInfo(int id, string opponentPlayer)
+        public GameJoinInfo(int id, string player)
         {
             this.id = id;
-            this.opponentPlayer = opponentPlayer;
+            this.player = player;
         }
         public int id { get; }
-        public string opponentPlayer { get; }
+        public string player { get; }
     };
 
     public struct GameInfo
