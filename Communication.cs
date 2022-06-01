@@ -12,8 +12,9 @@ namespace BattleshipsShared.Communication
         JoinGame,
         GameCreated,
         JoinConfirmation,
-        OpponentFound
-
+        OpponentFound,
+        SetBoard,
+        GameReady
     }
 
     public struct Message

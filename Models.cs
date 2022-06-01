@@ -54,4 +54,13 @@ namespace BattleshipsShared.Models
         public string userId { get; set; }
         public WebSocketContext WSocket { get; set; }
     }
+    public struct UserBoard
+    {
+        public UserBoard(int[,] board, int gameId) {
+            this.board = board;
+            this.gameId = gameId;
+        }
+        public int gameId { get; set; }
+        public int[,] board { get; set; }
+    }
 }
