@@ -1,4 +1,5 @@
 using System.Net.WebSockets;
+using BattleshipsShared.Communication;
 
 namespace BattleshipsShared.Models
 {
@@ -62,5 +63,32 @@ namespace BattleshipsShared.Models
         }
         public int gameId { get; set; }
         public int[,] board { get; set; }
+    }
+
+    public struct Shot
+    {
+        public Shot(int column, int row, int userId, int gameId) {
+            this.column = column;
+            this.row = row;
+            this.userId = userId;
+            this.gameId = gameId;
+        }
+        public int column { get; set; }
+        public int row { get; set; }
+        public int userId { get; set; }
+        public int gameId { get; set; }
+
+    }
+    public struct ShotResult
+    {
+        public ShotResult(int column, int row, ShotStatus shotStatus) {
+            this.column = column;
+            this.row = row;
+            this.shotStatus = shotStatus;
+        }
+        public int column { get; set; }
+        public int row { get; set; }
+        public ShotStatus shotStatus { get; set; }
+
     }
 }

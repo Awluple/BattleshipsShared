@@ -14,7 +14,15 @@ namespace BattleshipsShared.Communication
         JoinConfirmation,
         OpponentFound,
         SetBoard,
-        GameReady
+        GameReady,
+        PlayerShot,
+        ShotResult
+    }
+
+    public enum ShotStatus {
+        Miss,
+        Hit,
+        Destroyed
     }
 
     public struct Message
