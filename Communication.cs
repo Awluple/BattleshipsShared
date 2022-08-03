@@ -16,13 +16,18 @@ namespace BattleshipsShared.Communication
         SetBoard,
         GameReady,
         PlayerShot,
-        ShotResult
+        ShotResult,
+        GameResult,
+        OpponentLeft,
+        OpponentConnectionLost,
+        RematchProposition
     }
 
     public enum ShotStatus {
         Miss,
         Hit,
-        Destroyed
+        Destroyed,
+        Finished
     }
 
     public struct Message

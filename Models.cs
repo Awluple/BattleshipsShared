@@ -57,26 +57,20 @@ namespace BattleshipsShared.Models
     }
     public struct UserBoard
     {
-        public UserBoard(int[,] board, int gameId) {
+        public UserBoard(int[,] board) {
             this.board = board;
-            this.gameId = gameId;
         }
-        public int gameId { get; set; }
         public int[,] board { get; set; }
     }
 
     public struct Shot
     {
-        public Shot(int column, int row, int userId, int gameId) {
+        public Shot(int column, int row) {
             this.column = column;
             this.row = row;
-            this.userId = userId;
-            this.gameId = gameId;
         }
         public int column { get; set; }
         public int row { get; set; }
-        public int userId { get; set; }
-        public int gameId { get; set; }
 
     }
     public struct ShotResult
@@ -91,4 +85,18 @@ namespace BattleshipsShared.Models
         public ShotStatus shotStatus { get; set; }
 
     }
+
+    public struct GameResult
+    {
+        public GameResult(int column, int row, ShotStatus shotStatus, int winner) {
+            this.column = column;
+            this.row = row;
+            this.shotStatus = shotStatus;
+            this.winner = winner;
+        }
+        public int column { get; set; }
+        public int row { get; set; }
+        public ShotStatus shotStatus { get; set; }
+        public int winner { get; set; }
+        }
 }
