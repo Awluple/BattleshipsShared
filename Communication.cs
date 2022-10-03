@@ -20,7 +20,8 @@ namespace BattleshipsShared.Communication
         GameResult,
         OpponentLeft,
         OpponentConnectionLost,
-        RematchProposition
+        RematchProposition,
+        RematchAccepted
     }
 
     public enum ShotStatus {
