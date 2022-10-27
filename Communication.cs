@@ -30,7 +30,9 @@ namespace BattleshipsShared.Communication
         Destroyed,
         Finished
     }
-
+    /// <summary>Holds message type and data</summary>
+    /// <param name="requestType">Type of the message</param>
+    /// <param name="data">Data hold in the message</param>
     public struct Message
     {
 
@@ -41,7 +43,8 @@ namespace BattleshipsShared.Communication
 
         public RequestType requestType { get; set; }
         public object data { get; set; }
-
+        /// <summary>Deserializes data from a message to Dictionary</summary>
+        /// <returns>Dictionary with the data</returns>
         public static Dictionary<string, JObject> DeserializeData(Message message) {
             JObject messageData = (JObject)message.data;
             Dictionary<string, JObject> data = messageData.ToObject<Dictionary<string, JObject>>();
